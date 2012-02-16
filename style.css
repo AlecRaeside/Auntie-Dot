@@ -34,7 +34,7 @@
 		width:6px;
 		height:44px;
 		background:rgba(230,230,255,0.2);
-		-webkit-box-shadow:inset 0px 0px 8px rgba(240,240,255,0.2), 0px 0px 8px rgba(240,240,255,0.1);
+		-webkit-box-shadow:inset 0px 0px 3px rgba(240,240,255,0.2), 0px 0px 8px rgba(240,240,255,0.1);
 		display:inline-block;
 		z-index:0;
 	}
