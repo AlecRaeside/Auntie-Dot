@@ -34,11 +34,12 @@
 		
 		auntie_dot.delegate(".rect","click",function() {
 			$(this).toggleClass("highlight");
-			$(this).append("<span class='beam'></span>");
+			$(this).html("<span class='beam'></span>");
 		})
 		setInterval(function() {
 			flipBeams();
 		},9000);
+		flipBeams();
 		
 		auntie_dot.click(function() {
 			$(this).toggleClass("changed");
@@ -54,7 +55,7 @@
 			setTimeout(function(i) {
 				if (is_flipped) i = num_cols-i;
 				rows.children(":nth-child("+i+")").find(".beam").toggleClass("flipped");
-			},100*(num_cols-i),i);
+			},150*(num_cols-i),i);
 		}
 	}
 	
