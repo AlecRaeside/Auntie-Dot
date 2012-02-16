@@ -24,6 +24,7 @@
 		display:inline-block;
 		z-index:0;
 		position:relative;
+
 	}
 	.rect:before {
 		content:' ';
@@ -32,19 +33,19 @@
 		left:0px;
 		width:6px;
 		height:44px;
-		background:rgba(255,255,255,0.1);
-		-webkit-box-shadow:inset 0px 0px 8px rgba(255,255,255,0.2), 0px 0px 8px rgba(255,255,255,0.1);
+		background:rgba(230,230,255,0.2);
+		-webkit-box-shadow:inset 0px 0px 8px rgba(240,240,255,0.2), 0px 0px 8px rgba(240,240,255,0.1);
 		display:inline-block;
 		z-index:0;
 	}
 	.row .rect.highlight:before,.row .rect:hover:before {
-		background:rgba(230,240,255,0.95);
-		-webkit-box-shadow:inset 0px 0px 8px rgba(230,240,255,1),
-							0px 0px 12px 3px rgba(240,248,255,1);
+		background:rgba(200,210,255,0.95);
+		-webkit-box-shadow:inset 0px 0px 2px rgba(200,210,255,1),
+							0px 0px 12px 3px rgba(200,210,255,1);
 		border:none;
 	}
 	.row .rect.highlight .beam {
-		--background-color: rgba(230, 240, 255, 1);
+		
 		width: 550px;
 		height: 0px;
 		position: absolute;
@@ -55,44 +56,20 @@
 		-webkit-transform: perspective( 650 ) rotateY( 210deg ) rotateZ(00deg);
 		
 		-webkit-transform-origin: 0px;
-		box-shadow: 0px 0px 44px 6px rgba(230,240,255,0.55);
+		box-shadow: 0px 0px 40px 6px rgba(200,210,255,0.7);
 		-webkit-transform-origin-x: 0px;
 		-webkit-transform-origin-y: 50%;
+
+
 	}
 	.row .rect.highlight .beam.flipped {
-		-webkit-transform: perspective( 650 ) rotateY( 330deg ) rotateZ(0deg);
+		-webkit-transform: perspective( 650 ) rotateY( 330deg );
 	}
-	/*
-	.row:nth-child(2) .rect.highlight .beam {
-		-webkit-transform: rotateX(20deg);
-	}
-	.row:nth-child(3) .rect.highlight .beam {
-		-webkit-transform: rotateX(19deg);
-	}	
-	.row:nth-child(4) .rect.highlight .beam {
-		-webkit-transform: rotateX(18deg);
-	}
-	.row:nth-child(5) .rect.highlight .beam {
-		-webkit-transform: rotateX(17deg);
-	}	
-	.row:nth-child(6) .rect.highlight .beam {
-		-webkit-transform: rotateX(16deg);
-	}
-	.row:nth-child(7) .rect.highlight .beam {
-		-webkit-transform: rotateX(15deg);
-	}	
-	.row:nth-child(8) .rect.highlight .beam {
-		-webkit-transform: rotateX(14deg);
-	}
-	.row:nth-child(9) .rect.highlight .beam {
-		-webkit-transform: rotateX(13deg);
-	}	
-	.row:nth-child(9) .rect.highlight .beam {
-		-webkit-transform: rotateX(11deg);
-	}
-	*/
+	
 	.row {
 		overflow:visible;
+		-webkit-transform-style: preserve-3d;
+		perspective:500;
 	}
 	
 	.row:nth-child(2n) .rect:nth-child(2n):before {

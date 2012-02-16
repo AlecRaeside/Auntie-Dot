@@ -15,22 +15,22 @@
 		
 		var num_cols=Math.floor(viewport_width/width);
 		var num_rows=Math.floor(viewport_height/height);
-		
-		var html="";
-		
+		auntie_dot.html("")
 		for(var i=num_rows;i>0;i--) {
-			var _3d_direction = i;
-			html+="<div class='row r"+_3d_direction+"'>";
+			var row="";
+			row+="<div class='row'>";
 			for (var n=num_cols;n>0;n--) {
 				if (Math.random()<0.2 && n>10 && n<22 ) {
-					html+="<div class='highlight rect'><span class=beam></span></div>";
+					row += "<div class='highlight rect'><span class=beam></span></div>";
 				} else {
-					html+="<div class=rect></div>";
+					row += "<div class=rect></div>";
 				}
 			};
-			html+="</div>";
+			row += "</div>";
+			var $row = $(row);
+			auntie_dot.append($row)
 		}	
-		auntie_dot.html(html)
+		
 		
 		auntie_dot.delegate(".rect","click",function() {
 			$(this).toggleClass("highlight");
